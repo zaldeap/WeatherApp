@@ -14,8 +14,8 @@ namespace WeatherApp
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         
-        private readonly string googleApiKey = "AIzaSyAP8kakZfEGQoq4Zc0QsFn8qoTP-lrUezM"; // Replace with your API key
-        private readonly string apiKey = "a043be7af5mshca4a3945fd92576p19bccdjsnb13a7923e5ca";
+        private readonly string googleApiKey = ; //Contact me for API key should you need one
+        private readonly string apiKey = ;
         private string cityName;
         private bool isCelsius = true;
         private bool isFahrenheit = false;
@@ -180,7 +180,7 @@ namespace WeatherApp
         {
             //Link the data to the labels and display the data
             lblCityName.Content = weatherData.Location.Name;
-            lblTemperature.Content = weatherData.Current.TempC + "°C";
+            lblTemperature.Content = weatherData.Current.TempC + "Â°C";
             lblCondition.Content = weatherData.Current.Condition.Text;
             lblHumidity.Content = weatherData.Current.Humidity + "%";
             lblUV.Content = weatherData.Current.Uv + " UV";
@@ -211,13 +211,13 @@ namespace WeatherApp
                 if (isCelsius)
                 {
                     // Update temperature display in Celsius
-                    lblTemperature.Content = $"{weatherData.Current.TempC} °C";
+                    lblTemperature.Content = $"{weatherData.Current.TempC} Â°C";
                     lblWindSpeed.Content = $"{weatherData.Current.WindKph} km/h";
                 }
                 else if (isFahrenheit)
                 {
                     // Update temperature display in Fahrenheit
-                    lblTemperature.Content = $"{weatherData.Current.TempF} °F";
+                    lblTemperature.Content = $"{weatherData.Current.TempF} Â°F";
                     lblWindSpeed.Content = $"{weatherData.Current.WindMph} mph";
                 }
             }
